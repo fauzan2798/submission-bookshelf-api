@@ -4,7 +4,6 @@ const {
   getSpecifiedBookHandler,
   editBookByIdHandler,
   deleteBookByIdHandler,
-  getReadingAllBooks,
 } = require('./handler');
 
 const routes = [
@@ -23,25 +22,20 @@ const routes = [
   {
     // Kriteria 5 : API dapat menampilkan detail buku
     method: 'GET',
-    path: '/books/{id}',
+    path: '/books/{bookId}',
     handler: getSpecifiedBookHandler,
   },
   {
     // Kriteria 6 : API dapat mengubah data buku
     method: 'PUT',
-    path: '/books/{id}',
+    path: '/books/{bookId}',
     handler: editBookByIdHandler,
   },
   {
     // Kriteria 7 : API dapat menghapus buku
     method: 'DELETE',
-    path: '/books/{id}',
+    path: '/books/{bookId}',
     handler: deleteBookByIdHandler,
-  },
-  {
-    method: 'GET',
-    path: '/books',
-    handler: getReadingAllBooks,
   },
 ];
 
